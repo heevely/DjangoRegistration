@@ -1,0 +1,10 @@
+{% if question_list %}
+<ul>
+    {% for question in question_list %}
+    <li><a href="/exam/{{question.id}}/"><font size="5em">{{question.id}}</font></a></li>
+    <br>
+    {% endfor %}
+</ul>
+{% else %}
+    <p>No questions are available.</p>
+{% endif %}

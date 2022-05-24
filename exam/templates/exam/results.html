@@ -1,0 +1,19 @@
+<h1>{{question.question_text}}</h1>
+
+<p>The answer is <font size="6em" color="red"><strong>{{answer}}</strong></font></p>
+<br>
+<a href="{% url 'exam:statistics' question.id %}"><input type="submit" value="show statistics"></a>
+<a href="{% url 'exam:detail' question.id %}">Submit again?</a>
+<br><br>
+<a href="{% url 'exam:index' %}">Question list</a>
+
+<!--{% for choice in question.choice_set.all %}-->
+<!--    {% if choice == answer %}-->
+<!--        <p>CORRECT!</p>-->
+<!--        <a href="{% url 'exam:statistics' question.id %}"><input type="submit" value="show statistics"></a>-->
+<!--    {% else %}-->
+<!--        <p>TRY AGAIN~</p>-->
+<!--        <a href="{% url 'exam:detail' question.id %}">Submit again?</a>-->
+<!--    {% endif %}-->
+<!--{% endfor %}-->
+
